@@ -140,6 +140,8 @@ gdi32.lib
   <ItemGroup>
     <None Include="shader.frag" />
     <None Include="shader.vert" />
+    <None Include="shadow_depth.frag" />
+    <None Include="shadow_depth.vert" />
     <None Include="skybox.frag" />
     <None Include="skybox.vert" />
   </ItemGroup>

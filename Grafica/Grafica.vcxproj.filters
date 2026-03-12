@@ -35,5 +35,7 @@
     <None Include="skybox.frag" />
     <None Include="shader.vert" />
     <None Include="shader.frag" />
+    <None Include="shadow_depth.vert" />
+    <None Include="shadow_depth.frag" />
   </ItemGroup>
 </Project>

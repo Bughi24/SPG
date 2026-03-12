@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -19,12 +15,24 @@
       "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\Shader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\skybox.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\skybox.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\shadow_depth.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|solutionrelative:Grafica\\shadow_depth.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC0BD925-2A65-48DA-A490-26FA1D9480C4}|Grafica\\Grafica.vcxproj|C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -49,43 +57,109 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "skybox.frag",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.frag",
+              "RelativeDocumentMoniker": "Grafica\\skybox.frag",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.frag",
+              "RelativeToolTip": "Grafica\\skybox.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-19T17:37:00.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "skybox.vert",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.vert",
+              "RelativeDocumentMoniker": "Grafica\\skybox.vert",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.vert",
+              "RelativeToolTip": "Grafica\\skybox.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-19T17:34:29.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Shader.h",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h",
+              "RelativeDocumentMoniker": "Grafica\\Shader.h",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h",
+              "RelativeToolTip": "Grafica\\Shader.h",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-19T17:07:20.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "shader.vert",
               "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.vert",
               "RelativeDocumentMoniker": "Grafica\\shader.vert",
               "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.vert",
               "RelativeToolTip": "Grafica\\shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-22T12:12:56.852Z"
+              "WhenOpened": "2026-02-22T12:12:56.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "freeglut_std.h",
-              "DocumentMoniker": "C:\\Users\\bughi\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
-              "ToolTip": "C:\\Users\\bughi\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
-              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
-              "ViewState": "AgIAADUAAAAAAAAAAAAtwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-20T14:00:45.907Z"
+              "DocumentIndex": 1,
+              "Title": "shader.frag",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.frag",
+              "RelativeDocumentMoniker": "Grafica\\shader.frag",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.frag",
+              "RelativeToolTip": "Grafica\\shader.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-22T12:14:15.475Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "stb_image.h",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\stb_image.h",
-              "RelativeDocumentMoniker": "Grafica\\stb_image.h",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\stb_image.h",
-              "RelativeToolTip": "Grafica\\stb_image.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-20T13:59:07.837Z"
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\main.cpp",
+              "RelativeDocumentMoniker": "Grafica\\main.cpp",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\main.cpp",
+              "RelativeToolTip": "Grafica\\main.cpp",
+              "ViewState": "AgIAAC4CAAAAAAAAAAAiwEkCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-18T12:15:39.601Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "shadow_depth.vert",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.vert",
+              "RelativeDocumentMoniker": "Grafica\\shadow_depth.vert",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.vert",
+              "RelativeToolTip": "Grafica\\shadow_depth.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T13:29:21.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "shadow_depth.frag",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.frag",
+              "RelativeDocumentMoniker": "Grafica\\shadow_depth.frag",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shadow_depth.frag",
+              "RelativeToolTip": "Grafica\\shadow_depth.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-11T13:29:52.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "glad.c",
               "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\glad.c",
               "RelativeDocumentMoniker": "Grafica\\glad.c",
@@ -97,64 +171,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "skybox.frag",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.frag",
-              "RelativeDocumentMoniker": "Grafica\\skybox.frag",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.frag",
-              "RelativeToolTip": "Grafica\\skybox.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-19T17:37:00.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\main.cpp",
-              "RelativeDocumentMoniker": "Grafica\\main.cpp",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\main.cpp",
-              "RelativeToolTip": "Grafica\\main.cpp",
-              "ViewState": "AgIAALwBAAAAAAAAAADwv8IBAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-02-18T12:15:39.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "shader.frag",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.frag",
-              "RelativeDocumentMoniker": "Grafica\\shader.frag",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\shader.frag",
-              "RelativeToolTip": "Grafica\\shader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-22T12:14:15.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "skybox.vert",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.vert",
-              "RelativeDocumentMoniker": "Grafica\\skybox.vert",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\skybox.vert",
-              "RelativeToolTip": "Grafica\\skybox.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-19T17:34:29.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Shader.h",
-              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h",
-              "RelativeDocumentMoniker": "Grafica\\Shader.h",
-              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\Shader.h",
-              "RelativeToolTip": "Grafica\\Shader.h",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "stb_image.h",
+              "DocumentMoniker": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\stb_image.h",
+              "RelativeDocumentMoniker": "Grafica\\stb_image.h",
+              "ToolTip": "C:\\Users\\bughi\\source\\repos\\Grafica\\SPG\\Grafica\\stb_image.h",
+              "RelativeToolTip": "Grafica\\stb_image.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-02-19T17:07:20.223Z"
+              "WhenOpened": "2026-02-20T13:59:07.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "freeglut_std.h",
+              "DocumentMoniker": "C:\\Users\\bughi\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
+              "ToolTip": "C:\\Users\\bughi\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
+              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\freeglut-MSVC-3.0.0-2.mp\\freeglut\\include\\GL\\freeglut_std.h",
+              "ViewState": "AgIAADUAAAAAAAAAAAAtwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-20T14:00:45.907Z"
             }
           ]
         }
