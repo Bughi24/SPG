@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="glad.c">
+    <ClCompile Include="main..cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,8 +34,8 @@
     <None Include="skybox.vert" />
     <None Include="skybox.frag" />
     <None Include="shader.vert" />
-    <None Include="shader.frag" />
     <None Include="shadow_depth.vert" />
     <None Include="shadow_depth.frag" />
+    <None Include="shader.frag" />
   </ItemGroup>
 </Project>
