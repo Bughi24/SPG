@@ -1,5 +1,3 @@
-﻿  main..cpp
-C:\Users\bughi\source\repos\Grafica\SPG\Grafica\main..cpp(388,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\bughi\source\repos\Grafica\SPG\Grafica\main..cpp(478,93): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-C:\Users\bughi\source\repos\Grafica\SPG\Grafica\main..cpp(558,89): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+﻿  main.cpp
+C:\Users\bughi\source\repos\Grafica\SPG\Grafica\main.cpp(520,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Grafica.vcxproj -> C:\Users\bughi\source\repos\Grafica\SPG\x64\Debug\Grafica.exe
