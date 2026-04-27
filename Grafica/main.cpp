@@ -12,8 +12,17 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+// Sfera 
+glm::vec3 randomObjPos = glm::vec3(15.0f, 2.0f, 85.0f);
+glm::vec3 randomObjDir = glm::vec3(1.0f, 0.0f, 0.5f);
+float randomObjTimer = 0.0f;
+
+// Drona
+glm::vec3 circleObjPos;
+float circleAngle = 0.0f;
+
 // Car
-glm::vec3 carPos = glm::vec3(0.0f, 0.5f, 100.0f); 
+glm::vec3 carPos = glm::vec3(0.0f, 0.5f, 100.0f);
 float carAngle = 180.0f;
 float carSpeed = 0.0f;
 float maxSpeed = 40.0f;
@@ -144,6 +153,20 @@ glm::vec3 extraObjectPos = glm::vec3(67.0f, -0.5f, -12.0f);
 // Directiile spoturilor
 glm::vec3 spotDirs[2];
 
+struct BoundingBox {
+    glm::vec3 min;
+    glm::vec3 max;
+};
+
+
+BoundingBox hillBB = { glm::vec3(-60.0f, -0.5f, -60.0f), glm::vec3(60.0f, 54.0f, 60.0f) };
+
+bool CheckCollision(BoundingBox a, BoundingBox b) {
+    return (a.min.x <= b.max.x && a.max.x >= b.min.x) &&
+        (a.min.y <= b.max.y && a.max.y >= b.min.y) &&
+        (a.min.z <= b.max.z && a.max.z >= b.min.z);
+}
+
 void updateCameraVectors() {
     glm::vec3 front;
     front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
@@ -246,17 +269,6 @@ std::vector<float> generateTrack(float radiusX, float radiusZ, float trackWidth,
     return vertices;
 }
 
-struct BoundingBox {
-    glm::vec3 min;
-    glm::vec3 max;
-};
-
-bool CheckCollision(BoundingBox a, BoundingBox b) {
-    return (a.min.x <= b.max.x && a.max.x >= b.min.x) &&
-        (a.min.y <= b.max.y && a.max.y >= b.min.y) &&
-        (a.min.z <= b.max.z && a.max.z >= b.min.z);
-}
-
 void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
@@ -311,9 +323,7 @@ void processInput(GLFWwindow* window) {
     }
 
     if (!collided) {
-        BoundingBox hillBB;
-        hillBB.min = glm::vec3(-60.0f, -0.5f, -60.0f);
-        hillBB.max = glm::vec3(60.0f, 54.0f, 60.0f);
+        // Refolosim hillBB global in loc sa-l redefinim
         if (CheckCollision(carBB, hillBB)) {
             collided = true;
             carSpeed = -carSpeed * 0.5f;
@@ -348,9 +358,9 @@ void DrawDetailedCar(Shader& shader, unsigned int cubeVAO) {
 
     // ROȚI
     shader.setVec3("colorOverride", glm::vec3(0.05f, 0.05f, 0.05f));
-    float wX = 2.2f;   // Distanța stânga-dreapta 
-    float wY = -0.5f;  // La nivelul solului
-    float wZ = 3.0f;   // Distanța față-spate
+    float wX = 2.2f;
+    float wY = -0.5f;
+    float wZ = 3.0f;
     glm::vec3 wScale = glm::vec3(0.6f, 1.2f, 1.2f);
 
     glm::vec3 wheelPositions[] = {
@@ -367,7 +377,7 @@ void DrawDetailedCar(Shader& shader, unsigned int cubeVAO) {
         glDrawArrays(GL_TRIANGLES, 0, 36);
     }
 
-    // --- FARURI ---
+    // FARURI
     shader.setVec3("colorOverride", glm::vec3(1.0f, 1.0f, 0.5f));
     glm::mat4 mFarL = glm::translate(glm::mat4(1.0f), glm::vec3(-1.2f, 0.2f, 4.6f));
     shader.setMat4("model_detailed", glm::scale(mFarL, glm::vec3(0.7f, 0.5f, 0.15f)));
@@ -375,6 +385,29 @@ void DrawDetailedCar(Shader& shader, unsigned int cubeVAO) {
 
     glm::mat4 mFarR = glm::translate(glm::mat4(1.0f), glm::vec3(1.2f, 0.2f, 4.6f));
     shader.setMat4("model_detailed", glm::scale(mFarR, glm::vec3(0.7f, 0.5f, 0.15f)));
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+
+    shader.setBool("useOverrideColor", false);
+}
+
+// Desenează un marker vizibil deasupra unui obiect:
+// un stâlp subțire + un cub mai mare în vârf, în culoarea dată
+void DrawMarker(Shader& shader, unsigned int vao, glm::vec3 pos, glm::vec3 color) {
+    shader.setBool("useOverrideColor", true);
+    shader.setVec3("colorOverride", color);
+    glBindVertexArray(vao);
+
+    // Stâlp vertical subțire
+    glm::mat4 mPole = glm::translate(glm::mat4(1.0f), pos + glm::vec3(0.0f, 14.0f, 0.0f));
+    mPole = glm::scale(mPole, glm::vec3(0.5f, 12.0f, 0.5f));
+    shader.setMat4("model", mPole);
+    shader.setMat4("model_detailed", glm::mat4(1.0f));
+    glDrawArrays(GL_TRIANGLES, 0, 36);
+
+    // Cub mai mare în vârf (vizibil de departe)
+    glm::mat4 mTop = glm::translate(glm::mat4(1.0f), pos + glm::vec3(0.0f, 22.0f, 0.0f));
+    mTop = glm::scale(mTop, glm::vec3(3.0f, 3.0f, 3.0f));
+    shader.setMat4("model", mTop);
     glDrawArrays(GL_TRIANGLES, 0, 36);
 
     shader.setBool("useOverrideColor", false);
@@ -513,6 +546,47 @@ int main() {
 
         processInput(window);
 
+        // ----------------------------------------------------------------
+        // MIȘCARE ALEATOARE (Sfera) — cu coliziune față de munte și margini
+        // ----------------------------------------------------------------
+        randomObjTimer += deltaTime;
+        if (randomObjTimer > 2.0f) {
+            float rx = (rand() % 100 - 50) / 50.0f;
+            float rz = (rand() % 100 - 50) / 50.0f;
+            randomObjDir = glm::normalize(glm::vec3(rx, 0.0f, rz));
+            randomObjTimer = 0.0f;
+        }
+
+        glm::vec3 nextRandPos = randomObjPos + randomObjDir * 10.0f * deltaTime;
+        nextRandPos.y = 2.0f; // Sfera rămâne întotdeauna pe sol
+
+        // Coliziune sfera cu muntele — BB marit corespunzator (scala 4.0)
+        BoundingBox sphereBB = { nextRandPos - glm::vec3(4.0f), nextRandPos + glm::vec3(4.0f) };
+        if (CheckCollision(sphereBB, hillBB)) {
+            randomObjDir = -randomObjDir;
+            randomObjTimer = 2.0f; // forțează schimbare de direcție la următorul frame
+        }
+        else {
+            randomObjPos = nextRandPos;
+        }
+
+        // Limitează sfera în interiorul câmpiei (±180 unități)
+        if (randomObjPos.x > 180.0f) { randomObjPos.x = 180.0f; randomObjDir.x = -randomObjDir.x; }
+        if (randomObjPos.x < -180.0f) { randomObjPos.x = -180.0f; randomObjDir.x = -randomObjDir.x; }
+        if (randomObjPos.z > 180.0f) { randomObjPos.z = 180.0f; randomObjDir.z = -randomObjDir.z; }
+        if (randomObjPos.z < -180.0f) { randomObjPos.z = -180.0f; randomObjDir.z = -randomObjDir.z; }
+
+        // ----------------------------------------------------------------
+        // MIȘCARE PRESTABILITĂ (Drona) — cerc cu raza 100 la înălțimea 60
+        // Raza 100 > 60 (jumătatea BB-ului muntelui) => ocolește muntele
+        // Înălțime 60 > 54 (vârful muntelui scalat) => zboară deasupra
+        // ----------------------------------------------------------------
+        circleAngle += 45.0f * deltaTime;
+        float droneRadius = 100.0f;
+        circleObjPos.x = sin(glm::radians(circleAngle)) * droneRadius;
+        circleObjPos.z = cos(glm::radians(circleAngle)) * droneRadius;
+        circleObjPos.y = 60.0f;
+
         glm::mat4 lightSpaceMatrices[3];
 
         glm::vec3 sunPos = -lightDirSun * 150.0f;
@@ -627,7 +701,7 @@ int main() {
 
         // Shader principal
         floorShader.use();
-     
+
         floorShader.setMat4("model_detailed", glm::mat4(1.0f));
         floorShader.setBool("useOverrideColor", false);
         floorShader.setMat4("projection", projection);
@@ -661,7 +735,29 @@ int main() {
         floorShader.setMat4("model", modelHill);
         glBindVertexArray(hillVAO); glDrawArrays(GL_TRIANGLES, 0, 12);
 
-        // Masina
+        // Sfera (miscare aleatoare)
+        floorShader.setBool("useOverrideColor", true);
+        floorShader.setVec3("colorOverride", glm::vec3(0.2f, 0.8f, 0.2f));
+        glm::mat4 mRand = glm::translate(glm::mat4(1.0f), randomObjPos);
+        mRand = glm::scale(mRand, glm::vec3(4.0f)); // marit de la 2.0 la 4.0
+        floorShader.setMat4("model", mRand);
+        glBindVertexArray(buildingVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        // Drona (miscare cerc)
+        floorShader.setVec3("colorOverride", glm::vec3(0.2f, 0.2f, 0.9f));
+        glm::mat4 mCirc = glm::translate(glm::mat4(1.0f), circleObjPos);
+        mCirc = glm::rotate(mCirc, glm::radians(circleAngle), glm::vec3(0, 1, 0));
+        mCirc = glm::scale(mCirc, glm::vec3(6.0f, 1.0f, 6.0f)); // marit de la 3/0.5/3
+        floorShader.setMat4("model", mCirc);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        floorShader.setBool("useOverrideColor", false);
+
+        // Markere vizibile deasupra obiectelor mobile
+        // Verde pentru sfera, albastru pentru drona
+        DrawMarker(floorShader, buildingVAO, randomObjPos, glm::vec3(0.0f, 1.0f, 0.0f));
+        DrawMarker(floorShader, buildingVAO, circleObjPos, glm::vec3(0.0f, 0.4f, 1.0f));
         glm::mat4 mCarBase = glm::translate(glm::mat4(1.0f), carPos);
         mCarBase = glm::rotate(mCarBase, glm::radians(carAngle), glm::vec3(0, 1, 0));
         floorShader.setMat4("model", mCarBase);
